@@ -16,6 +16,8 @@ namespace TypicalTechTools.Models
         public int ProductCode { get; set; }
 
         public int UserId { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd MMMM yyyy hh:mm tt}")]
         public DateTime CreatedDate { get; set; }
 
         /// <summary>
