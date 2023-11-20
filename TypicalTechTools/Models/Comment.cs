@@ -4,12 +4,17 @@ namespace TypicalTechTools.Models
     {
     public class Comment
         {
-
         public int Id { get; set; }
+
         [Display(Name = "Comment")]
+        [Required(ErrorMessage = "Comment is required.")]
+        [StringLength(maximumLength: 100, MinimumLength = 2, ErrorMessage = "Needs to be between 2 and 100 characters long.")]
         public string CommentText { get; set; }
+
         [Display(Name = "Product Code")]
+        [Range(0, 99999)]
         public int ProductCode { get; set; }
+
         public int UserId { get; set; }
         public DateTime CreatedDate { get; set; }
 
